@@ -47,7 +47,7 @@ const rl = readline.createInterface({
   }).on('close', () => {
     console.log(`\nИгра завершена!\nВаш результат: ${w} верно ответили и ${g-w} неверно`);
     let date = new Date();
-    let data = `${date.toISOString()} games:${g}, wins:${w},\n`;
+    let data = `${date.toISOString()} games:${g}, wins:${w};\n`;
     if (!logFile) logFile='games.log'
     fs.appendFile(logFile, data, (err) => {
         if (err) throw err;
